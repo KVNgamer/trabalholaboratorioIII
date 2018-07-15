@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PainelTabelaProdutoController_principal">
+    <children>
+      <SplitPane dividerPositions="0.3762541806020067" layoutX="155.0" layoutY="79.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="TableViewProduto" layoutX="11.0" layoutY="43.0" prefHeight="398.0" prefWidth="222.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="tableColumProdutoCod" prefWidth="48.0" text="Codigo" />
+                      <TableColumn fx:id="tableColumProdutoNome" prefWidth="102.0" text="Nome" />
+                        <TableColumn fx:id="tableColumProdutoPreco" prefWidth="75.0" text="Preco" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
+               <children>
+                  <Label layoutX="136.0" layoutY="24.0" text="Descricao Produto" />
+                  <GridPane layoutX="85.0" layoutY="136.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Codigo" />
+                        <Label text="Nome" GridPane.rowIndex="1" />
+                        <Label text="Preco" GridPane.rowIndex="2" />
+                        <Label fx:id="labelProdutoCodigo" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="labelProdutoNome" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelProdutoPreco" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <Group layoutX="-1.0" layoutY="-30.0">
+                     <children>
+                        <Button fx:id="Inserir" layoutX="66.0" layoutY="337.0" mnemonicParsing="false" text="inserir" />
+                        <Button fx:id="Remover" layoutX="259.0" layoutY="337.0" mnemonicParsing="false" text="Remover" />
+                        <Button fx:id="Alterar" layoutX="168.0" layoutY="337.0" mnemonicParsing="false" text="Alterar" />
+                     </children>
+                  </Group>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
